@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/v1/schema.sql
+      contextFilter: main,test
+  - include:
+      file: db/changelog/v1/test-seed-data.sql
+      contextFilter: main
+  - include:
+      file: db/changelog/v1/add_index_to_default_schema.sql
+      contextFilter: main,test

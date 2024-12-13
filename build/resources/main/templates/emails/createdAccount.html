@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml"
+      lang="en">
+<head>
+    <title th:text="${firstName + ', your account has been created.'}"></title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="margin: 0; padding: 0;">
+<p style="margin-bottom: 1rem;" th:text="${'Greetings ' + firstName}"></p>
+<p>Your account has been created in AllinOne.</p>
+<p style="margin-bottom: 1rem;">To set up your password, please visit the link below.</p>
+
+<p th:text="${'Username: ' + username}"></p>
+<p>Link to set up your password: <a th:href="${resetUrl}" th:text="${resetUrl}"></a></p>
+</body>
+</html>
